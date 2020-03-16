@@ -1,0 +1,96 @@
+Button(width)
+
+	height = (width * 0.4)
+
+	&#ButtonContainer
+		flex:           1
+		display:        flex
+		flex-direction: column
+		align-items:    flex-start
+		user-select:    none
+
+		#Spacer_ButtonTop
+			transition: 1s all
+
+		button
+			display:          flex
+			direction:        row
+			justify-content:  center
+			align-items:      center
+			width:            width
+			height:           height
+			margin:           (height * 1.5) 0
+			padding:          0
+			background-color: Color.Button.Default.background
+			border:           1px solid Color.Button.Default.border
+			cursor:           pointer
+
+			transition:
+				background-color 0.3s ease-in-out,
+				color            0.3s ease-in-out,
+				transform        0.3s ease-in-out
+
+			.text
+				flex:        0
+				height:      auto
+				font-size:   (height * 0.65)
+				line-height: 0
+				font-weight: bold
+				text-align:  center
+				color:       Color.Button.Default.text
+
+			.spacer
+				flex: 1
+
+			&:hover
+				background-color: Color.Button.Default_Hover.background
+				border:           1px solid Color.Button.Default_Hover.border
+				transform:        scale(1.15)
+
+				.text
+					color: Color.Button.Default_Hover.text
+
+		&.start > button > .text.start{display:inline-block}
+		&.start > button > .text.stop {display:none        }
+		&.stop  > button > .text.start{display:none        }
+		&.stop  > button > .text.stop {display:inline-block}
+
+		&.start
+
+			#Spacer_ButtonTop
+				flex: 0
+
+			button
+				background-color: Color.Button.Start.background
+				border:           1px solid Color.Button.Start.border
+				transform:        scale(1.5)
+
+				.text
+					color: Color.Button.Start.text
+
+				&:hover
+					border:           1px solid Color.Button.Start_Hover.border
+					background-color: Color.Button.Start_Hover.background
+					transform:        scale(1.65)
+
+					.text
+						color: Color.Button.Start_Hover.text
+
+		&.stop
+
+			#Spacer_ButtonTop
+				flex: 1
+
+			button
+				background-color: Color.Button.Default.background
+				border:           1px solid Color.Button.Default.border
+
+				.text
+					color: Color.Button.Default.text
+
+				&:hover
+					border:           1px solid Color.Button.Default_Hover.border
+					background-color: Color.Button.Default_Hover.background
+
+					.text
+						color: Color.Button.Default_Hover.text

@@ -1,0 +1,44 @@
+//-###  Reference  ###-//
+//- https://codepen.io/charles1971/pen/qBELEVN
+
+
+#Modal.modal.micromodal-fade
+	.modal__overlay(close-modal)
+		#modal-container.modal__container
+
+			header#modal-header.modal__header
+				button.modal__close(close-modal)
+
+			#modal-content-content.modal-content-content
+				#modal-content.modal__content
+					#ControlDescription
+						:markdown-it
+							The piano can be controlled via: ${{"  "}}
+							&nbsp; \- mouse                  ${{"  "}}
+							&nbsp; \- touch                  ${{"  "}}
+							&nbsp; \- MIDI controller        ${{"  "}}
+							&nbsp; \- the `START` button     ${{"  "}}
+					#Repository
+						.header
+							| Check out the repository at:
+						.link
+							button
+								a(href="https://github.com/FicoPrieto/AudioVisual-Framework-Demo" target="_blank")
+									include ../SVG/GitHub.pug
+
+
+
+//-###################################################-//
+//-##  ToDo:                                        ##-//
+//-##    find close-modal bug @ namespace refactor  ##-//
+//-###################################################-//
+
+//- #Modal.modal.fadeTransition
+//- 	.overlay(close-modal)
+//- 		.sectionContainer
+
+//- 			.header
+//- 				button.close(close-modal)
+
+//- 			.contentContainer
+//- 				.content

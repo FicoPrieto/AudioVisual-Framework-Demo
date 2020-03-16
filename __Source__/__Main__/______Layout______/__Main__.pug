@@ -1,0 +1,38 @@
+html
+
+
+	//-##############-//
+	//-###  Head  ###-//
+	//-##############-//
+
+	head
+		title &#65279;
+
+		//- Blank Favicon
+		link(rel="icon" href="data:;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+
+		script(src="node_modules/ripple-js/ripple.min.js")
+
+
+	//-##############-//
+	//-###  Body  ###-//
+	//-##############-//
+
+	body
+
+		#P5_Back
+		#P5_Front
+
+		include ./Components/Modal.pug
+
+		#Spacer_PianoTop
+
+		include ./Components/Piano.pug
+
+		#ButtonContainer.start
+			#Spacer_ButtonTop
+			button#ToggleAudioSequence.start.ripple(onclick=`__Sketch__.__Main__.toggle_AudioSequence()` ripple-color="#FFF3")
+				.text.spacer
+				.text.start START
+				.text.stop STOP
+				.text.spacer

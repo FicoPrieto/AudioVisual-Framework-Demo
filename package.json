@@ -1,0 +1,78 @@
+{
+
+"name":    "audio-visual-framework-demo",
+"version": "0.0.1",
+"license": "gpl-2.0",
+
+"dependencies": {
+	"chance":            "^1.1.4",
+	"easing":            "^1.2.1",
+	"lodash":            "^4.17.15",
+	"micromodal ":       "^0.4.2",
+	"number-to-words":   "^1.2.4",
+	"p5":                "^1.0.0",
+	"ripple-js":         "^1.4.4",
+	"startaudiocontext": "^1.2.1",
+	"tone":              "next"
+},
+
+"devDependencies": {
+	"@types/node":    "^13.9.0",
+
+	"ts-node":        "^8.6.2",
+	"tsconfig-paths": "^3.9.0",
+	"typescript":     "^3.8.3",
+	"ts-loader":      "^6.2.1",
+
+	"jest":        "^25.1.0",
+	"ts-jest":     "^25.2.1",
+	"@types/jest": "^25.1.4",
+
+	"nodemon": "^2.0.2",
+
+	"webpack":                   "^4.42.0",
+	"@types/loader-utils":       "^1.1.3",
+	"@types/webpack":            "^4.41.7",
+	"webpack-cli":               "^3.3.11",
+	"webpack-dev-server":        "^3.10.3",
+	"@types/webpack-dev-server": "^3.10.0",
+
+	"clean-webpack-plugin":           "^3.0.0",
+	"@types/clean-webpack-plugin":    "^0.1.3",
+	"html-webpack-plugin":            "^3.2.0",
+	"@types/html-webpack-plugin":     "^3.2.2",
+	"mini-css-extract-plugin":        "^0.9.0",
+	"@types/mini-css-extract-plugin": "^0.9.1",
+
+	"stylus":        "^0.54.7",
+	"css-loader":    "^3.0.2",
+	"stylus-loader": "^3.0.2",
+
+	"pug":                       "^2.0.4",
+	"pug-loader":                "^2.4.0",
+	"jstransformer-markdown-it": "^2.1.0",
+
+	"@types/webmidi": "^2.0.4",
+
+	"@types/chance":          "^1.0.9",
+	"@types/lodash":          "^4.14.149",
+	"@types/micromodal":      "^0.3.1",
+	"@types/number-to-words": "^1.2.0",
+	"@types/p5":              "^0.9.0"
+},
+
+"scripts": {
+	"install-dependencies": "yarn install",
+
+	"build": "webpack --config ./__Configuration__/Webpack/__Main__.ts",
+
+	"start": "webpack-dev-server --open --host --config ./__Configuration__/Webpack/__Main__.ts",
+
+	"debug":       "cls && ts-node -r tsconfig-paths/register ./__Source__/__Main__/__Debug__.ts",
+	"debug-watch": "nodemon --config ./__Configuration__/NodeMon/__Main__.json --exec ts-node -r tsconfig-paths/register ./__Source__/__Main__/__Debug__.ts",
+
+	"test":          "cls && jest --config ./__Configuration__/Jest/__Main__.js",
+	"test:coverage": "cls && jest --config ./__Configuration__/Jest/__Main__.js --coverage"
+}
+
+}

@@ -1,0 +1,50 @@
+Piano(width)
+
+	whiteKey_Count  = 35
+	height          = (width * 0.14  )
+	border_Width    = (width * 0.0008)
+	whiteKey_Height = height
+	whiteKey_Width  = (width / whiteKey_Count)
+	blackKey_Height = (whiteKey_Height * 0.55)
+	blackKey_Width  = (whiteKey_Width  * 0.55)
+	blackKey_Offset = (-(blackKey_Width / 2) - border_Width)
+
+	&#Spacer_PianoTop
+		flex: 1
+
+	&#Piano
+
+		margin-bottom: 1em
+
+		flex: 0
+
+		.key
+			position:   relative
+			float:      left
+			transition: background-color .15s ease-in-out
+
+			&.chord
+				transition: background-color .5s ease-in-out
+
+		.white.key
+			width:            whiteKey_Width
+			height:           whiteKey_Height
+			z-index:          1
+			border-top:       border_Width solid KeyColor.Border.whiteKey
+			border-bottom:    border_Width solid KeyColor.Border.whiteKey
+			border-left:      border_Width solid KeyColor.Border.whiteKey
+			background-color: KeyColor.Monochrome_Unpressed.whiteKey
+
+		.black.key
+			width:            blackKey_Width
+			height:           blackKey_Height
+			z-index:          2
+			border:           border_Width solid KeyColor.Border.blackKey
+			background-color: KeyColor.Monochrome_Unpressed.blackKey
+
+		.key
+			&.a, &.b, &.d, &.e, &.g, &.black
+				margin: 0 0 0 blackKey_Offset
+
+		.key:last-child
+			border-right: border_Width solid KeyColor.Border.whiteKey

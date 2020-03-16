@@ -1,0 +1,33 @@
+{
+	"ExposedFunction_Key": "__Sketch__",
+
+	"Color": {
+		"Modal": {
+			"Icon":        {"default":"hsl(243, 3%, 40%)", "hover":"hsl(243, 3%, 50%)"},
+			"Header":      {"background":"hsl(243, 3%, 12%)", "text":"hsl(243, 3%, 24%)", "border":"hsl(243, 3%, 18%)"},
+			"Content":     {"background":"hsl(243, 3%, 18%)", "text":"hsl(243, 4%, 40%)", "border":"hsl(243, 3%, 18%)"},
+			"StartButton": {"background":"hsl(144, 30%, 17%)", "text":"hsl(144, 30%, 35%)", "border":"hsl(144, 30%,  24%)"},
+			"CloseButton": {                                  "text":"hsl(243, 3%, 5% )"                              }
+		},
+		"Button": {
+			"Start":        {"background":"hsl(144, 30%, 8% )", "text":"hsl(144, 30%, 18%)", "border":"hsl(144, 30%,  9% )"},
+			"Start_Hover":  {"background":"hsl(144, 30%, 12%)", "text":"hsl(144, 30%, 25%)", "border":"hsl(144, 30%,  19%)"},
+			"Default":      {"background":"hsl(243, 3%,  8% )", "text":"hsl(243, 3%,  18%)", "border":"hsl(243, 3%,  9% )" },
+			"Default_Hover":{"background":"hsl(243, 3%,  12%)", "text":"hsl(243, 3%,  25%)", "border":"hsl(243, 3%,  19%)" }
+		},
+		"Page": {"background":"#0A0A0A", "text":"hsl(243, 15%,  20%)"},
+		"PianoKeys": {
+			"Border":               {"whiteKey":"hsl(243, 3%,  5% )", "blackKey":"hsl(243, 3%,  6% )"},
+			"Monochrome_Unpressed": {"whiteKey":"hsl(243, 3%,  8% )", "blackKey":"hsl(243, 3%,  5% )"},
+			"Monochrome_Pressed":   {"whiteKey":"hsl(243, 6%,  14%)", "blackKey":"hsl(243, 6%,  14%)"},
+			"Pink":                 {"whiteKey":"hsl(305, 25%, 20%)", "blackKey":"hsl(305, 25%, 20%)"},
+			"Purple":               {"whiteKey":"hsl(261, 23%, 17%)", "blackKey":"hsl(261, 23%, 17%)"},
+			"Blue":                 {"whiteKey":"hsl(220, 30%, 19%)", "blackKey":"hsl(220, 30%, 19%)"},
+			"Red":                  {"whiteKey":"hsl(345, 30%, 20%)", "blackKey":"hsl(345, 30%, 20%)"},
+			"Orange":               {"whiteKey":"hsl(25,  25%, 20%)", "blackKey":"hsl(25,  25%, 20%)"},
+			"Yellow":               {"whiteKey":"hsl(40,  20%, 23%)", "blackKey":"hsl(40,  20%, 23%)"},
+			"Green":                {"whiteKey":"hsl(142, 30%, 35%)", "blackKey":"hsl(142, 30%, 35%)"}
+		}
+	}
+
+}

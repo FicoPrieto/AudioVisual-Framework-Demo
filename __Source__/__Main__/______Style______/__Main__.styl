@@ -1,0 +1,98 @@
+//###  Utilities  ###//
+@require "./Utilities/Normalize"
+@require "./Utilities/MediaQueries"
+@require "./Utilities/Mixins"
+
+//###  Setup  ###//
+Settings  = json("../../Settings.json", {hash:true})
+Color     = Settings.Color
+KeyColor  = Color.PianoKeys
+
+
+//##############//
+//###  Page  ###//
+//##############//
+
+html
+body
+	height: 100%
+
+body
+	center_Children()
+	flex-direction:   column
+	margin:           auto
+	overflow:         hidden
+	background-color: Color.Page.background
+	line-height:      1.8em
+
+body
+body *
+	font-weight: normal
+	font-family: monospace !important
+
+	&:focus
+		outline: none
+
+
+//####################//
+//###  Components  ###//
+//####################//
+
+@require "./Components/Button"
+@require "./Components/Modal"
+@require "./Components/P5"
+@require "./Components/Piano"
+
+//#########################################################//
+//##  ToDo:                                              ##//
+//##    finish implementing responsiveness calculations  ##//
+//#########################################################//
+
+button_PortraitPercent = 3
+piano_PortraitPercent =  2
+
+buttonWidth = 5.6vmin
+pianoWidth  = 45vw
+
+button_PhoneWidth  = (buttonWidth * 3  )
+button_TabletWidth = (buttonWidth * 1.2)
+button_LaptopWidth = (buttonWidth * 1.1)
+button_DesktopWidth= (buttonWidth * 1  )
+
+piano_PhoneWidth   = (pianoWidth  * 2  )
+piano_TabletWidth  = (pianoWidth  * 1.9)
+piano_LaptopWidth  = (pianoWidth  * 1.5)
+piano_DesktopWidth = (pianoWidth  * 1  )
+
+@media Phone.Landscape
+	Button(width:button_PhoneWidth)
+	Piano (width:piano_PhoneWidth )
+	P5()
+@media Tablet.Landscape
+	Button(width:button_TabletWidth)
+	Piano (width:piano_TabletWidth )
+	P5()
+@media Laptop.Landscape
+	Button(width:button_LaptopWidth)
+	Piano (width:piano_LaptopWidth )
+	P5()
+@media Desktop.Landscape
+	Button(width:button_DesktopWidth)
+	Piano (width:piano_DesktopWidth )
+	P5()
+@media Phone.Portrait
+	Button(width:(button_PhoneWidth * button_PortraitPercent))
+	Piano (width:(piano_PhoneWidth  * button_PortraitPercent))
+	P5()
+@media Tablet.Portrait
+	Button(width:(button_TabletWidth * 1))
+	Piano (width:(piano_TabletWidth  * 1))
+	P5()
+@media Laptop.Portrait
+	Button(width:(button_LaptopWidth * button_PortraitPercent))
+	Piano (width:(piano_LaptopWidth  * piano_PortraitPercent ))
+	P5()
+@media Desktop.Portrait
+	Button(width:(button_DesktopWidth * button_PortraitPercent))
+	Piano (width:(piano_DesktopWidth  * piano_PortraitPercent ))
+	P5()

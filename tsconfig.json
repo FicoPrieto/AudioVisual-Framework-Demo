@@ -1,0 +1,40 @@
+{
+
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs",
+
+		"baseUrl": "./",
+		"outDir":  "./__Build__",
+		"paths":   {
+			"~/*":     ["./__Source__/*"                     ],
+			"@/*":     ["./__Source__/__Modules__/*"         ],
+			"Settings":["./__Source__/__Main__/Settings.json"],
+		},
+
+		"resolveJsonModule":            true,
+		"allowSyntheticDefaultImports": true,
+		"declaration":                  true,
+		"downlevelIteration":           true,
+		"emitDecoratorMetadata":        true,
+		"esModuleInterop":              true,
+		"experimentalDecorators":       true,
+		"noFallthroughCasesInSwitch":   true,
+		"noImplicitReturns":            true,
+		"noUnusedLocals":               false,
+		"noUnusedParameters":           false,
+		"removeComments":               true,
+		"strict":                       false,
+		"strictBindCallApply":          true,
+	},
+
+	"include": [
+		"./__Configuration__/Webpack/**/*.ts",
+		"./__Source__/**/*.ts",
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.todo.ts",
+	]
+
+}
